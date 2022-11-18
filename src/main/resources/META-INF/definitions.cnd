@@ -8,6 +8,8 @@
 [ftnt:componentsFeaturesTest] > jnt:content, mix:title, ftmix:componentsFeaturesTest
  - textInput (string) i18n mandatory
  - richTextInput (string, richtext) i18n mandatory
- - eventPicker (weakreference, picker[type='editorial']) < 'jnt:event'
- - mediaAsset (weakreference, picker[type='image']) internationalized < 'jmix:image'
+ - mediaAsset (weakreference, picker[type='image']) internationalized multiple < 'jmix:image'
+ - reportFile (weakreference, picker[type='pdf']) < 'jnt:file'
+ - contentReference (weakreference, picker[type='editorial']) < 'jmix:droppableContent', 'jmix:editorialContent'
+ - eventPicker (weakreference, picker[type='custom-event-picker']) < 'jnt:event'
  - contentAsset (weakreference, picker[type='editoriallink']) internationalized < 'jmix:droppableContent', 'jnt:page'

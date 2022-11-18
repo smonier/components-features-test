@@ -1,0 +1,28 @@
+{
+  "name":"ftnt:componentsFeaturesTest",
+  "dynamic":false,
+  "fields":[
+    {
+      "name":"reportFile",
+      "selectorType": "Picker",
+      "selectorOptionsMap": {
+        "type":"pdf",
+        "accordionItem": {
+          "picker-media": {
+            "label":"components-features-test:label.json.folder",
+            "rootPath": "/sites/{site}/files",
+            "treeConfig": {
+              "hideRoot": false
+            }
+          }
+        },
+        "pickerConfig": {
+          "pickerDialog": {
+            "displaySiteSwitcher": false,
+            "dialogTitle": "components-features-test:label.json.title"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,13 +1,19 @@
 {
   "label": {
-    "settings": {
-      "title": "Components Features Test setting"
+    "picker":
+    {
+      "title": "Select an event",
+      "type": "Event type",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "contentFolder": "Event folders",
+      "empty": "Select an event",
+      "notFound": "The event cannot be found. Select another one."
     },
-    "action": {
-      "title": "Components Features Test - How to extend the ui ?"
-    },
-    "appsAccordion": {
-      "title": "Components Features Test"
+    "json":
+    {
+      "title": "Select a report",
+      "folder": "Report folder"
     }
   }
 }
