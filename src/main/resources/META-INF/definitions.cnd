@@ -1,0 +1,13 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<ftnt = 'http://www.jahia.org/featurestest/nt/1.0'>
+<ftmix = 'http://www.jahia.org/featurestest/mix/1.0'>
+
+[ftmix:componentsFeaturesTest] > jmix:droppableContent, jmix:editorialContent mixin
+
+[ftnt:componentsFeaturesTest] > jnt:content, mix:title, ftmix:componentsFeaturesTest
+ - textInput (string) i18n mandatory
+ - richTextInput (string, richtext) i18n mandatory
+ - eventPicker (weakreference, picker[type='editorial']) < 'jnt:event'
+ - mediaAsset (weakreference, picker[type='image']) internationalized < 'jmix:image'
+ - contentAsset (weakreference, picker[type='editoriallink']) internationalized < 'jmix:droppableContent', 'jnt:page'
