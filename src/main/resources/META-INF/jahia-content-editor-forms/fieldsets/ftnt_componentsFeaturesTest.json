@@ -10,7 +10,7 @@
         "accordionItem": {
           "picker-media": {
             "label":"components-features-test:label.json.folder",
-            "rootPath": "/sites/{site}/files",
+            "rootPath": "/sites/industrial/files",
             "treeConfig": {
               "hideRoot": false
             }
