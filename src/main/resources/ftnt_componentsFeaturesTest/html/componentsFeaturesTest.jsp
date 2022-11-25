@@ -24,20 +24,32 @@
 <c:set var="reportFile" value="${currentNode.properties['reportFile'].node}"/>
 <c:set var="contentReference" value="${currentNode.properties['contentReference'].node}"/>
 <c:set var="eventPicker" value="${currentNode.properties['eventPicker'].node}"/>
-<c:set var="contentAsset" value="${currentNode.properties['contentAsset'].node}"/>
+<c:set var="pageReference" value="${currentNode.properties['pageReference'].node}"/>
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
 <c:set var="description" value="${currentNode.properties['jcr:description'].string}"/>
 
-<h1>${title}</h1>
+<h2>${title}</h2>
 
-<p class="lead">
+<h3>
     ${textInput}
-</p>
+</h3>
 
 <p class="lead">
     ${richTextInput}
 </p>
+
+<a href="${linkTarget.url}">${linkText}</a>
+
 <c:forEach items="${mediaAsset}" var="item">
-    <img src="${item.node.url}" class="img-thumbnail w-25" alt="${item.node}">
+    <img src="${item.node.url}" class="img-thumbnail" style="width:300px" alt="${item.node}">
 </c:forEach>
 
+<div>
+    <span>References:</span>
+    <ul>
+        <li>Page: <a href="${pageReference.url}">${pageReference.properties['jcr:title']}</a></li>
+        <li>Report: <a href="${reportFile.url}">${reportFile.properties['j:nodename']}</a></li>
+        <li>Content: ${contentReference.properties['j:nodename']}</li>
+        <li>Event: <a href="${eventPicker.url}">${eventPicker.properties['jcr:title']}</a></li>
+    </ul>
+</div>

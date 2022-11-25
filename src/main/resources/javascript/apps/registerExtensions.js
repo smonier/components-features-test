@@ -20,7 +20,7 @@ window.jahia.uiExtender.registry.add('callback', 'customEventPickerRegistration'
             },
             searchContentType: 'jnt:event',
             selectableTypesTable: ['jnt:event'],
-            accordions: ['picker-content-folders'],
+            accordions: ['picker-pages', 'picker-content-folders'],
             accordionItem: {
                 "picker-pages": {
                     tableConfig: {
@@ -34,7 +34,7 @@ window.jahia.uiExtender.registry.add('callback', 'customEventPickerRegistration'
                             label: 'components-features-test:label.picker.type',
                             sortable: true,
                             property: 'eventsType.value'
-                        },
+                            },
                             {
                                 id: 'start-date',
                                 accessor: row => row.startDate && new Date(row.startDate.value).toLocaleDateString(),
@@ -50,13 +50,15 @@ window.jahia.uiExtender.registry.add('callback', 'customEventPickerRegistration'
                                 width: '150px',
                                 sortable: true,
                                 property: 'endDate.value'
-                            }]
+                            }
+                        ]
                     },
                     treeConfig: {
                         hideRoot: true
-                    }
+                    },
+                    rootPath: "/sites/digitall",
                 },
-                "picker-content-folders": {
+            "picker-content-folders": {
                     tableConfig: {
                         fragments: [{
                             gql: jahia.graphqlTag('fragment MyProp on JCRNode { eventsType: property(name: "eventsType") { value:choicelistValue(renderer:"resourceBundle", language: $language) }, startDate: property(name: "startDate") { value }, endDate: property(name: "endDate") { value }}'),
@@ -86,11 +88,11 @@ window.jahia.uiExtender.registry.add('callback', 'customEventPickerRegistration'
                                 property: 'endDate.value'
                             }]
                     },
-                    rootPath: "/sites/industrial/contents/Events",
-
+                    rootPath: "/sites/digitall/contents/events",
                     treeConfig: {
                         hideRoot: false
-                    }
+                    },
+                    label: "Events content folder"
                 }
             }
         });
