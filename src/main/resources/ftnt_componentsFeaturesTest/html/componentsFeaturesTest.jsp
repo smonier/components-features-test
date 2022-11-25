@@ -28,8 +28,16 @@
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
 <c:set var="description" value="${currentNode.properties['jcr:description'].string}"/>
 
+<h1>${title}</h1>
 
+<p class="lead">
+    ${textInput}
+</p>
+
+<p class="lead">
+    ${richTextInput}
+</p>
 <c:forEach items="${mediaAsset}" var="item">
-	${item.node}
+    <img src="${item.node.url}" class="img-thumbnail w-25" alt="${item.node}">
 </c:forEach>
 

@@ -15,12 +15,12 @@ window.jahia.uiExtender.registry.add('callback', 'customEventPickerRegistration'
                 view: 'List',
                 dialogTitle: 'components-features-test:label.picker.title',
                 displayTree: true,
-                displaySiteSwitcher: true,
+                displaySiteSwitcher: false,
                 displaySearch: true
             },
             searchContentType: 'jnt:event',
             selectableTypesTable: ['jnt:event'],
-            accordions: ['picker-pages', 'picker-content-folders'],
+            accordions: ['picker-content-folders'],
             accordionItem: {
                 "picker-pages": {
                     tableConfig: {
@@ -86,6 +86,8 @@ window.jahia.uiExtender.registry.add('callback', 'customEventPickerRegistration'
                                 property: 'endDate.value'
                             }]
                     },
+                    rootPath: "/sites/industrial/contents/Events",
+
                     treeConfig: {
                         hideRoot: false
                     }
